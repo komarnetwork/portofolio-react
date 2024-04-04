@@ -27,7 +27,7 @@ const Contact = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex flex-col items-start flex-1 p-6 pb-24 border rounded-2xl gap-y-6'
+            className='flex flex-col items-start flex-1 p-6 pb-24 mb-20 border rounded-2xl gap-y-6'
           >
             <input
               type='text'

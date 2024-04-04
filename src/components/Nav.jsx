@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <div className='fixed z-50 w-full overflow-hidden bottom-2 lg:bottom-8'>
       <div className='container mx-auto'>
-        <div className='flex items-center justify-between w-full h-12 px-5 mx-auto rounded-full bg-black/20 backdrop-blur-2xl max-w-80 text-white/50'>
+        <div className='flex items-center justify-between w-full h-12 px-5 mx-auto bg-blue-400 rounded-full backdrop-blur-2xl max-w-80 text-slate-50'>
           <Link
             to='home'
             activeClass='active'

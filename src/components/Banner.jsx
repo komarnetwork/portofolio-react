@@ -1,10 +1,13 @@
-import Image from '../assets/avatar.svg'
+import Image from '../assets/avatarKecil.png'
 import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
 
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
+
+import Button from './button'
+import ButtonOutline from './button/outline'
 
 const Banner = () => {
   return (
@@ -44,7 +47,7 @@ const Banner = () => {
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className='max-w-lg mx-auto mb-8 lg:mx-0'
+              className='max-w-lg mx-auto mb-8 font-semibold lg:mx-0'
             >
               Junior programmer with more than 2 years experience as a developer, frontend and backend developer
             </motion.p>
@@ -57,28 +60,16 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.1 }}
               className='flex items-center mx-auto mb-12 max-w-max gap-x-6 lg:mx-0'
             >
-              <button className='btn btn-lg'>Download CV</button>
-              <a href='#' className='text-gradient btn-link'>
+              <Button type='button' to='#'>
+                Download CV
+              </Button>
+
+              <ButtonOutline type='button' to='#'>
                 My Portofolio
-              </a>
+              </ButtonOutline>
             </motion.div>
 
             {/* Social */}
-            {/* <motion.div
-              variants={fadeIn('up', 0.9)}
-              initial='hidden'
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.1 }}
-              className='flex mx-auto gap-x-6 max-w-max lg:mx-0'
-            >
-              <a href='#'>
-                <FaGithub />
-              </a>
-              <a href='#'>
-                <FaLinkedinIn />
-              </a>
-            </motion.div> */}
-
             <motion.div
               variants={fadeIn('up', 1)}
               initial='hidden'
@@ -88,19 +79,19 @@ const Banner = () => {
             >
               <Link
                 to='#'
-                className='p-2 transition-all duration-500 rounded-full rounded-bl-none bg-gray-950 hover:bg-slate-50 hover:text-gray-950 hover:-translate-y-3'
+                className='p-2 transition-all duration-500 bg-blue-600 rounded-full rounded-bl-none text-slate-50 hover:bg-slate-800 hover:text-slate-50 hover:-translate-y-3'
               >
                 <FaGithub />
               </Link>
               <Link
                 to='#'
-                className='p-2 transition-all duration-500 bg-blue-600 rounded-full rounded-bl-none hover:bg-slate-50 hover:text-blue-600 hover:-translate-y-3'
+                className='p-2 transition-all duration-500 bg-blue-600 rounded-full rounded-bl-none text-slate-50 hover:bg-slate-800 hover:text-slate-50 hover:-translate-y-3'
               >
                 <FaLinkedinIn />
               </Link>
               <Link
                 to='#'
-                className='p-2 transition-all duration-500 bg-red-600 rounded-full rounded-bl-none hover:bg-slate-50 hover:text-red-600 hover:-translate-y-3'
+                className='p-2 transition-all duration-500 bg-blue-600 rounded-full rounded-bl-none text-slate-50 hover:bg-slate-800 hover:text-slate-50 hover:-translate-y-3'
               >
                 <FaEnvelope />
               </Link>

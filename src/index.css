@@ -5,22 +5,43 @@
 :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary-color: #43a0ec;
+  --shadow-color: #2096f7;
+  --secondary-color: #b7beee;
 }
 
-.btn {
-  background: linear-gradient(92.23deg, #ff56f6 21.43%, #b936ee 50.63%, #3bace2 100%, #406aff 117.04%);
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
-}
+/* .btn {
+  background: linear-gradient(
+    92.23deg,
+    var(--primary-color) 21.43%,
+    var(--secondary-color) 50.63%,
+    var(--shadow-color) 100%,
+    var(--secondary-color) 117.04%
+  );
+  box-shadow: 0px 4.42184px 107.23px var(--shadow-color);
+} */
 
-.btn:hover {
-  background: linear-gradient(92.23deg, #406aff 21.43%, #3bace2 50.63%, #b936ee 100%, #ff56f6 117.04%);
-}
+/* .btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    var(--secondary-color) 21.43%,
+    var(--shadow-color) 50.63%,
+    var(--secondary-color) 100%,
+    var(--primary-color) 117.04%
+  );
+} */
 
-.gradient,
+/* .gradient,
 .active {
-  background: linear-gradient(92.23deg, #406aff 21.43%, #3bace2 50.63%, #b936ee 100%, #ff56f6 117.04%);
-}
-
+  background: linear-gradient(
+    92.23deg,
+    var(--secondary-color) 21.43%,
+    var(--shadow-color) 50.63%,
+    var(--secondary-color) 100%,
+    var(--primary-color) 117.04%
+  );
+} */
+/* 
 .active {
   color: #f0f0f0;
   padding: 1rem;
@@ -29,11 +50,11 @@
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
-}
+} */
 
 @layer base {
   body {
-    @apply text-lg leading-8 text-slate-50 font-secondary;
+    @apply text-lg leading-8 text-[#2096f7] font-secondary;
   }
   .h2 {
     @apply font-primary text-3xl mb-6 tracking-[10%] uppercase;
@@ -42,7 +63,7 @@
     @apply font-secondary font-semibold text-2xl mb-6 leading-[46px];
   }
   .btn {
-    @apply font-medium rounded-full text-slate-50 font-primary;
+    @apply text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2;
   }
   .btn-sm {
     @apply h-10 px-6 text-sm;
@@ -54,9 +75,12 @@
     @apply text-base;
   }
   .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+    @apply relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg;
   }
   .section {
     @apply flex items-center py-8 lg:py-24 lg:h-screen;
+  }
+  .active {
+    @apply text-blue-400 transition-all duration-500 rounded-full bg-gradient-to-r from-slate-50 to-indigo-50;
   }
 }
