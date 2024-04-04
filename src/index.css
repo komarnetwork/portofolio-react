@@ -22,14 +22,18 @@
 }
 
 .active {
-  color: #fff;
+  color: #f0f0f0;
   padding: 1rem;
   border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 @layer base {
   body {
-    @apply text-lg leading-8 text-white font-secondary;
+    @apply text-lg leading-8 text-slate-50 font-secondary;
   }
   .h2 {
     @apply font-primary text-3xl mb-6 tracking-[10%] uppercase;
@@ -38,7 +42,7 @@
     @apply font-secondary font-semibold text-2xl mb-6 leading-[46px];
   }
   .btn {
-    @apply font-medium text-white rounded-full font-primary;
+    @apply font-medium rounded-full text-slate-50 font-primary;
   }
   .btn-sm {
     @apply h-10 px-6 text-sm;

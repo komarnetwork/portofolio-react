@@ -29,35 +29,33 @@ const About = () => {
             className='flex-1 '
           >
             <h2 className='h2 text-accent'>About me.</h2>
-            <h3 className='mb-4 h3'>Junior programmer with more than 2 years of experience using the Laravel, React JS</h3>
             <p className='mb-6'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate excepturi aspernatur nam vitae ex iure voluptas sapiente voluptatem
-              odio maiores, saepe dignissimos cumque culpa eum quasi ullam itaque temporibus incidunt id pariatur minus similique rem! Libero non
-              ducimus numquam repellat!
+              Junior programmer with more than 2 years experience as a developer, where previously I was just a web developer using WordPress and
+              blogger, and now I am starting my career in the field of more interactive and complex web programming, using Laravel, Javascript, Node
+              JS, ReactJS, VueJS, Express, and HapiJS. I enjoy learning new things in programming. Currently, I am taking several Web Developer
+              classes, one of which is {'"Dicoding Indonesia"'}
             </p>
             {/* slots */}
             <div className='flex mb-12 gap-x-6 lg:gap-x-10'>
               <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={13} duration={3} /> : null}</div>
+                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={2} duration={3} /> : null}</div>
                 <div className='font-primary text-sm tracking-[2px'>
                   Years of <br /> Experience
                 </div>
               </div>
               <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={15} duration={3} /> : null} k+</div>
+                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={5} duration={3} /> : null}</div>
                 <div className='font-primary text-sm tracking-[2px'>
                   Projects <br />
                 </div>
               </div>
               <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={13} duration={3} /> : null}</div>
-                <div className='font-primary text-sm tracking-[2px'>
-                  Satisfid <br /> Clients
-                </div>
+                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={5} duration={3} /> : null}</div>
+                <div className='font-primary text-sm tracking-[2px'>Clients</div>
               </div>
             </div>
             <div className='flex items-center gap-x-8'>
-              <button className='btn btn-lg'>Contact me</button>
+              <button className='btn btn-lg'>Download CV</button>
               <a href='#' className='text-gradient btn-link'>
                 My Portfolio
               </a>

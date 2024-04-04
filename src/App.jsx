@@ -6,6 +6,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Work from './components/Work'
 import Contact from './components/Contact'
+import Experience from './components/Experience'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       <Banner />
       <Nav />
       <About />
-      <Services />
+      {/* <Services /> */}
+      <Experience />
       <Work />
       <Contact />
       {/* <div className='h-[4000px]'></div> */}
