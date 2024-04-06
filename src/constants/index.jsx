@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: 'Freelance Programmer',
     company_name: 'EndCode',
-    iconBg: '#1d1836',
+    iconBg: '#c0daf7',
     date: 'Mei 2020 - Now',
     points: [
       'Developing and maintaining web applications using Laravel, React.js, Virtual Private Server other related technologies.',
@@ -14,7 +14,7 @@ export const experiences = [
   {
     title: 'Full Stack Developer',
     company_name: 'PT Target Kelola Securindo',
-    iconBg: '#1d1836',
+    iconBg: '#c0daf7',
     date: 'Agu 2021 - Mei 2022',
     points: [
       'Implementing responsive design with bootstrap and ensuring cross-browser compatibility.',
@@ -26,7 +26,7 @@ export const experiences = [
   {
     title: 'Frontend Developer',
     company_name: 'PT. WIKI ARTHA PRATAMA',
-    iconBg: '#1d1836',
+    iconBg: '#c0daf7',
     date: 'Jul 2020 - Feb 2021',
     points: [
       'Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.',
@@ -37,7 +37,7 @@ export const experiences = [
   {
     title: 'Laser Operator',
     company_name: 'Artnations Studio',
-    iconBg: '#1d1836',
+    iconBg: '#c0daf7',
     date: 'Jun 2016 - Des 2018',
     points: [
       'Worked to ensure a positive and hassle-free customer experience.',

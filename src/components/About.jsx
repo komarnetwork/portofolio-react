@@ -1,67 +1,122 @@
-import CountUp from 'react-countup'
+// import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
+import { experiences } from '../constants'
+import Button from './button'
+import ButtonOutline from './button/outline'
+import Profile from '../assets/MyProfile.png'
 
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   })
 
+  const tools = [
+    {
+      name: 'Mysql',
+      icon: '../../src/assets/icon/MySql.svg',
+    },
+    {
+      name: 'Express',
+      icon: '../../src/assets/icon/Express.svg',
+    },
+    {
+      name: 'React',
+      icon: '../../src/assets/icon/React.svg',
+    },
+    {
+      name: 'Vue',
+      icon: '../../src/assets/icon/Vue.svg',
+    },
+    {
+      name: 'Nodejs',
+      icon: '../../src/assets/icon/Nodejs.svg',
+    },
+
+    {
+      name: 'JavaScript',
+      icon: '../../src/assets/icon/JavaScript.svg',
+    },
+    {
+      name: 'Laravel',
+      icon: '../../src/assets/icon/Laravel.svg',
+    },
+    {
+      name: 'Bootstrap',
+      icon: '../../src/assets/icon/Bootstrap.svg',
+    },
+    {
+      name: 'Tailwind',
+      icon: '../../src/assets/icon/Tailwind.svg',
+    },
+    {
+      name: 'GitHub',
+      icon: '../../src/assets/icon/GitHub.svg',
+    },
+    {
+      name: 'Postman',
+      icon: '../../src/assets/icon/Postman.svg',
+    },
+    {
+      name: 'Linux',
+      icon: '../../src/assets/icon/Linux.svg',
+    },
+  ]
+
   return (
-    <section className='px-4 section' id='about' ref={ref}>
+    <section className='px-4 py-8 lg:h-screen md:py-28' id='about' ref={ref}>
       <div className='container mx-auto'>
-        <div className='flex flex-col h-screen gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0'>
-          {/* Img */}
+        <div className='flex flex-col gap-10 lg:flex-row'>
+          <motion.div variants={fadeIn('right', 0.3)} initial='hidden' whileInView={'show'} className='flex items-center justify-center w-full'>
+            <img src={Profile} className='object-cover shadow-lg md:h-full rounded-xl' />
+          </motion.div>
+
           <motion.div
-            variants={fadeIn('right', 0.3)}
+            variants={fadeIn('left', 0.3)}
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 bg-top bg-no-repeat bg-contain bg-about h-[640px] mix-blend-lighten'
-          ></motion.div>
-          {/* Desc */}
-          <motion.div
-            variants={fadeIn('left', 0.5)}
-            initial='hidden'
-            whileInView={'show'}
-            viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 '
+            className='flex flex-wrap justify-center lg:justify-start'
           >
-            <h2 className='h2 text-accent'>About me.</h2>
-            <p className='mb-6'>
+            <h2 className='h2'>About me.</h2>
+            <p className='font-semibold'>
               Junior programmer with more than 2 years experience as a developer, where previously I was just a web developer using WordPress and
               blogger, and now I am starting my career in the field of more interactive and complex web programming, using Laravel, Javascript, Node
-              JS, ReactJS, VueJS, Express, and HapiJS. I enjoy learning new things in programming. Currently, I am taking several Web Developer
-              classes, one of which is {'"Dicoding Indonesia"'}
+              JS, React, Vue, Express, and Hapi. I enjoy learning new things in programming. Currently, I am taking several Web Developer classes, one
+              of which is {'"Dicoding Indonesia"'}
             </p>
-            {/* slots */}
-            <div className='flex mb-12 gap-x-6 lg:gap-x-10'>
-              <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={2} duration={3} /> : null}</div>
-                <div className='font-primary text-sm tracking-[2px'>
-                  Years of <br /> Experience
-                </div>
-              </div>
-              <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={5} duration={3} /> : null}</div>
-                <div className='font-primary text-sm tracking-[2px'>
-                  Projects <br />
-                </div>
-              </div>
-              <div>
-                <div className='mb-2 text-3xl font-tertiary text-gradient'>{inView ? <CountUp start={0} end={5} duration={3} /> : null}</div>
-                <div className='font-primary text-sm tracking-[2px'>Clients</div>
-              </div>
-            </div>
-            <div className='flex items-center gap-x-8'>
-              <button className='btn btn-lg'>Download CV</button>
-              <a href='#' className='text-gradient btn-link'>
+            <div className='flex items-center py-5 gap-x-5'>
+              <Button type='button' to='#'>
+                Download CV
+              </Button>
+              <ButtonOutline type='button' to='#'>
                 My Portfolio
-              </a>
+              </ButtonOutline>
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          variants={fadeIn('up', 0.4)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.1 }}
+          className='flex flex-col items-center justify-center py-10'
+        >
+          <h3 className='uppercase h3 text-accent'>Technology</h3>
+          <div className='grid justify-center grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-6'>
+            {tools.map((t, index) => (
+              <div
+                className='flex flex-col items-center gap-2 px-5 py-1 transition-all duration-150 ease-out transform rounded-md cursor-pointer hover:border hover:scale-110 hover:shadow-xl'
+                key={t.name}
+              >
+                <img src={t.icon} className='w-8 h-8' />
+                <p>{t.name}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

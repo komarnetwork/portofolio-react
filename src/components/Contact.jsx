@@ -3,7 +3,7 @@ import { fadeIn } from '../variants'
 
 const Contact = () => {
   return (
-    <section className='px-4 py-16 lg:section' id='contact'>
+    <section className='px-4 py-16 bg-blue-100 lg:h-screen' id='contact'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           {/* text */}
@@ -27,20 +27,20 @@ const Contact = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex flex-col items-start flex-1 p-6 pb-24 mb-20 border rounded-2xl gap-y-6'
+            className='flex flex-col items-start flex-1 p-6 pb-24 mb-20 border border-accent rounded-2xl gap-y-6'
           >
             <input
               type='text'
-              className='w-full py-3 transition-all bg-transparent border-b outline-none placeholder:text-slate-50 focus::border-accent'
+              className='w-full py-3 transition-all bg-transparent border-b outline-none border-accent placeholder:text-accent focus::border-accent'
               placeholder='Your name'
             />
             <input
               type='text'
-              className='w-full py-3 transition-all bg-transparent border-b outline-none placeholder:text-slate-50 focus::border-accent'
+              className='w-full py-3 transition-all bg-transparent border-b outline-none border-accent placeholder:text-accent focus::border-accent'
               placeholder='Your email'
             />
             <textarea
-              className='w-full py-12 mb-12 transition-all bg-transparent border-b outline-none resize-none placeholder:text-slate-50 focus::border-accent'
+              className='w-full py-12 mb-12 transition-all bg-transparent border-b outline-none resize-none border-accent placeholder:text-accent focus::border-accent'
               placeholder='Your message '
             ></textarea>
             <button className='btn btn-lg'>send message</button>

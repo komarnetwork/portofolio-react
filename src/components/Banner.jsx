@@ -11,30 +11,29 @@ import ButtonOutline from './button/outline'
 
 const Banner = () => {
   return (
-    <section className='flex px-4 items-center min-h-[85vh] lg:min-h-[78vh]' id='home'>
+    <section className='h-screen px-4 py-8 lg:h-screen' id='home'>
       <div className='container mx-auto'>
-        <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
-          <div className='flex-1 text-center font-secondary lg:text-left'>
+        <div className='grid gap-5 lg:grid-cols-2 grid-rows-0'>
+          <div className='flex flex-col items-center justify-center md:py-44 py-28 lg:text-left lg:items-start'>
             <motion.h1
               variants={fadeIn('up', 0.1)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className='text-5xl font-bold'
+              className='text-5xl font-bold text-center'
             >
               Hi {"I'am"} <span className='text-accent'>Komarudin</span>
             </motion.h1>
-
             <motion.div
-              variants={fadeIn('up', 0.1)}
+              variants={fadeIn('up', 0.2)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className='mb-6 text-2xl font-semibold uppercase lg:text-3xl leading-[1]'
+              className='text-2xl mb-8 text-center font-semibold uppercase leading-[1]'
             >
               <span className='mr-2'>I am a</span>
               <TypeAnimation
-                sequence={['Full Stack Developer', 2000, 'Web Developer', 2000]}
+                sequence={['Fullstack Developer', 2000, 'Web Developer', 2000]}
                 speed={50}
                 className='text-accent'
                 wrapper='span'
@@ -43,22 +42,21 @@ const Banner = () => {
             </motion.div>
 
             <motion.p
-              variants={fadeIn('up', 0.8)}
+              variants={fadeIn('up', 0.4)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className='max-w-lg mx-auto mb-8 font-semibold lg:mx-0'
+              className='mb-8 font-semibold text-center lg:text-left'
             >
               Junior programmer with more than 2 years experience as a developer, frontend and backend developer
             </motion.p>
 
-            {/* Button */}
             <motion.div
-              variants={fadeIn('up', 0.9)}
+              variants={fadeIn('up', 0.5)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
-              className='flex items-center mx-auto mb-12 max-w-max gap-x-6 lg:mx-0'
+              className='flex items-center mx-auto mb-8 max-w-max gap-x-6 lg:mx-0'
             >
               <Button type='button' to='#'>
                 Download CV
@@ -69,9 +67,8 @@ const Banner = () => {
               </ButtonOutline>
             </motion.div>
 
-            {/* Social */}
             <motion.div
-              variants={fadeIn('up', 1)}
+              variants={fadeIn('up', 0.6)}
               initial='hidden'
               whileInView={'show'}
               viewport={{ once: false, amount: 0.1 }}
@@ -97,8 +94,12 @@ const Banner = () => {
               </Link>
             </motion.div>
           </div>
-
-          <motion.div variants={fadeIn('down', 0.3)} initial='hidden' whileInView={'show'} className='flex-1 hidden lg:flex max-w-80 lg:max-w-lg'>
+          <motion.div
+            variants={fadeIn('down', 0.4)}
+            initial='hidden'
+            whileInView={'show'}
+            className='items-center justify-end hidden text-right lg:flex'
+          >
             <img src={Image} alt='ProfileImg' />
           </motion.div>
         </div>
