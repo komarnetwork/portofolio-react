@@ -1,9 +1,8 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import { motion } from 'framer-motion'
-import { styles } from '../styles'
+import { fadeIn } from '../variants'
 import { experiences } from '../constants'
-import { textVariant } from '../utils/motion'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 
 const Experience = () => {
@@ -48,10 +47,10 @@ const Experience = () => {
       <section className='px-4 py-8' id='experience'>
         <div className='container mx-auto'>
           <div className='flex flex-col items-center justify-center lg:flex-row gap-x-10'>
-            <div>
+            <motion.div variants={fadeIn('up', 0.1)} initial='hidden' whileInView={'show'} viewport={{ once: false, amount: 0.1 }}>
               <p className='tracking-wider text-center uppercase text-secondary'>What I have done so far</p>
               <h2 className='text-center h2 text-accent'>Work Experience.</h2>
-            </div>
+            </motion.div>
           </div>
 
           <VerticalTimeline lineColor='#c0daf7'>

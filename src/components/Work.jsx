@@ -4,13 +4,27 @@ import { motion } from 'framer-motion'
 
 const Work = () => {
   return (
-    <section className='px-4 section lg:h-screen md:h-screen' id='work'>
+    <section className='px-4 py-8 lg:py-28 lg:h-screen md:max-h-full' id='work'>
       <div className='container mx-auto'>
         <div>
-          <h2 className='text-center h2 text-accent'>My Project.</h2>
+          <motion.h2
+            variants={fadeIn('up', 0.1)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.1 }}
+            className='text-center h2 text-accent'
+          >
+            My Project.
+          </motion.h2>
         </div>
 
-        <div className='gap-5 sm:flex sm:flex-wrap sm:justify-center'>
+        <motion.div
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.1 }}
+          className='gap-5 sm:flex sm:flex-wrap sm:justify-center'
+        >
           <div className='sm:w-full md:w-2/5 lg:w-64'>
             {/* image */}
             <div className='relative overflow-hidden border-2 group border-white/50 rounded-xl'>
@@ -168,7 +182,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

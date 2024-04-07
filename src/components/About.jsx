@@ -8,10 +8,6 @@ import ButtonOutline from './button/outline'
 import Profile from '../assets/MyProfile.png'
 
 const About = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  })
-
   const tools = [
     {
       name: 'Mysql',
@@ -65,7 +61,7 @@ const About = () => {
   ]
 
   return (
-    <section className='px-4 py-8 lg:h-screen md:py-28' id='about' ref={ref}>
+    <section className='px-4 py-8 lg:py-28 lg:h-screen md:max-h-full' id='about'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-10 lg:flex-row'>
           <motion.div variants={fadeIn('right', 0.3)} initial='hidden' whileInView={'show'} className='flex items-center justify-center w-full'>
