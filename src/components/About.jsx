@@ -11,52 +11,52 @@ const About = () => {
   const tools = [
     {
       name: 'Mysql',
-      icon: '../../public/assets/icon/MySQL.svg',
+      icon: '../../portofolio-react/assets/icon/MySQL.svg',
     },
     {
       name: 'Express',
-      icon: '../../public/assets/icon/Express.svg',
+      icon: '../../portofolio-react/assets/icon/Express.svg',
     },
     {
       name: 'React',
-      icon: '../../public/assets/icon/React.svg',
+      icon: '../../portofolio-react/assets/icon/React.svg',
     },
     {
       name: 'Vue',
-      icon: '../../public/assets/icon/Vue.svg',
+      icon: '../../portofolio-react/assets/icon/Vue.svg',
     },
     {
       name: 'Nodejs',
-      icon: '../../public/assets/icon/Nodejs.svg',
+      icon: '../../portofolio-react/assets/icon/Nodejs.svg',
     },
 
     {
       name: 'JavaScript',
-      icon: '../../public/assets/icon/JavaScript.svg',
+      icon: '../../portofolio-react/assets/icon/JavaScript.svg',
     },
     {
       name: 'Laravel',
-      icon: '../../public/assets/icon/Laravel.svg',
+      icon: '../../portofolio-react/assets/icon/Laravel.svg',
     },
     {
       name: 'Bootstrap',
-      icon: '../../public/assets/icon/Bootstrap.svg',
+      icon: '../../portofolio-react/assets/icon/Bootstrap.svg',
     },
     {
       name: 'Tailwind',
-      icon: '../../public/assets/icon/Tailwind.svg',
+      icon: '../../portofolio-react/assets/icon/Tailwind.svg',
     },
     {
       name: 'GitHub',
-      icon: '../../public/assets/icon/GitHub.svg',
+      icon: '../../portofolio-react/assets/icon/GitHub.svg',
     },
     {
       name: 'Postman',
-      icon: '../../public/assets/icon/Postman.svg',
+      icon: '../../portofolio-react/assets/icon/Postman.svg',
     },
     {
       name: 'Linux',
-      icon: '../../public/assets/icon/Linux.svg',
+      icon: '../../portofolio-react/assets/icon/Linux.svg',
     },
   ]
 
