@@ -11,52 +11,52 @@ const About = () => {
   const tools = [
     {
       name: 'Mysql',
-      icon: '../../src/assets/icon/MySql.svg',
+      icon: '../../public/assets/icon/MySQL.svg',
     },
     {
       name: 'Express',
-      icon: '../../src/assets/icon/Express.svg',
+      icon: '../../public/assets/icon/Express.svg',
     },
     {
       name: 'React',
-      icon: '../../src/assets/icon/React.svg',
+      icon: '../../public/assets/icon/React.svg',
     },
     {
       name: 'Vue',
-      icon: '../../src/assets/icon/Vue.svg',
+      icon: '../../public/assets/icon/Vue.svg',
     },
     {
       name: 'Nodejs',
-      icon: '../../src/assets/icon/Nodejs.svg',
+      icon: '../../public/assets/icon/Nodejs.svg',
     },
 
     {
       name: 'JavaScript',
-      icon: '../../src/assets/icon/JavaScript.svg',
+      icon: '../../public/assets/icon/JavaScript.svg',
     },
     {
       name: 'Laravel',
-      icon: '../../src/assets/icon/Laravel.svg',
+      icon: '../../public/assets/icon/Laravel.svg',
     },
     {
       name: 'Bootstrap',
-      icon: '../../src/assets/icon/Bootstrap.svg',
+      icon: '../../public/assets/icon/Bootstrap.svg',
     },
     {
       name: 'Tailwind',
-      icon: '../../src/assets/icon/Tailwind.svg',
+      icon: '../../public/assets/icon/Tailwind.svg',
     },
     {
       name: 'GitHub',
-      icon: '../../src/assets/icon/GitHub.svg',
+      icon: '../../public/assets/icon/GitHub.svg',
     },
     {
       name: 'Postman',
-      icon: '../../src/assets/icon/Postman.svg',
+      icon: '../../public/assets/icon/Postman.svg',
     },
     {
       name: 'Linux',
-      icon: '../../src/assets/icon/Linux.svg',
+      icon: '../../public/assets/icon/Linux.svg',
     },
   ]
 
